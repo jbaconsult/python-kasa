@@ -1,5 +1,5 @@
 version = 1
-revision = 5
+revision = 3
 requires-python = ">=3.11, <4.0"
 resolution-markers = [
     "python_full_version >= '3.15'",
@@ -732,6 +732,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/1f/53/a5da4f2c5739cf66290fac1431ee52aff6851c7c8ffd8264f13affd7bcdd/docutils-0.20.1.tar.gz", hash = "sha256:f08a4e276c3a1583a86dce3e34aba3fe04d02bba2dd51ed16106244e8a923e3b", size = 2058365, upload-time = "2023-05-16T23:39:19.748Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/26/87/f238c0670b94533ac0353a4e2a1a771a0cc73277b88bff23d3ae35a256c1/docutils-0.20.1-py3-none-any.whl", hash = "sha256:96f387a2c5562db4476f09f13bbab2192e764cac08ebbf3a34a95d9b1e4a59d6", size = 572666, upload-time = "2023-05-16T23:39:15.976Z" },
+]
+
+[[package]]
+name = "ecdsa"
+version = "0.19.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "six" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/25/ca/8de7744cb3bc966c85430ca2d0fcaeea872507c6a4cf6e007f7fe269ed9d/ecdsa-0.19.2.tar.gz", hash = "sha256:62635b0ac1ca2e027f82122b5b81cb706edc38cd91c63dda28e4f3455a2bf930", size = 202432, upload-time = "2026-03-26T09:58:17.675Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/51/79/119091c98e2bf49e24ed9f3ae69f816d715d2904aefa6a2baa039a2ba0b0/ecdsa-0.19.2-py2.py3-none-any.whl", hash = "sha256:840f5dc5e375c68f36c1a7a5b9caad28f95daa65185c9253c0c08dd952bb7399", size = 150818, upload-time = "2026-03-26T09:58:15.808Z" },
 ]
 
 [[package]]
@@ -1597,6 +1609,15 @@ wheels = [
 ]
 
 [[package]]
+name = "passlib"
+version = "1.7.4"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b6/06/9da9ee59a67fae7761aab3ccc84fa4f3f33f125b370f1ccdb915bf967c11/passlib-1.7.4.tar.gz", hash = "sha256:defd50f72b65c5402ab2c573830a6978e5f202ad0d984793c8dde2c4152ebe04", size = 689844, upload-time = "2020-10-08T19:00:52.121Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3b/a4/ab6b7589382ca3df236e03faa71deac88cae040af60c071a78d254a62172/passlib-1.7.4-py2.py3-none-any.whl", hash = "sha256:aa6bca462b8d8bda89c70b382f0c298a20b5560af6cbfa2dce410c0a2fb669f1", size = 525554, upload-time = "2020-10-08T19:00:49.856Z" },
+]
+
+[[package]]
 name = "pathspec"
 version = "1.1.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1963,7 +1984,9 @@ dependencies = [
     { name = "aiohttp" },
     { name = "asyncclick" },
     { name = "cryptography" },
+    { name = "ecdsa" },
     { name = "mashumaro" },
+    { name = "passlib" },
     { name = "tzdata", marker = "sys_platform == 'win32'" },
 ]
 
@@ -2011,9 +2034,11 @@ requires-dist = [
     { name = "aiohttp", specifier = ">=3" },
     { name = "asyncclick", specifier = ">=8.1.7" },
     { name = "cryptography", specifier = ">=1.9" },
+    { name = "ecdsa", specifier = ">=0.19.1" },
     { name = "kasa-crypt", marker = "extra == 'speedups'", specifier = ">=0.2.0" },
     { name = "mashumaro", specifier = ">=3.20" },
     { name = "orjson", marker = "extra == 'speedups'", specifier = ">=3.11.1" },
+    { name = "passlib", specifier = ">=1.7.4" },
     { name = "ptpython", marker = "extra == 'shell'" },
     { name = "rich", marker = "extra == 'shell'" },
     { name = "tzdata", marker = "sys_platform == 'win32'", specifier = ">=2024.2" },
